@@ -1,3 +1,5 @@
+import * as Utils from '../utils/Utils';
+
 const colors = {
   0: '#000000',
   1: '#0000AA',
@@ -21,7 +23,7 @@ function ItemName(props) {
   const { name, material } = props;
 
   if (!name) {
-    return <div className="item-name default">{material.charAt(0) + material.substring(1).replaceAll('_', ' ').toLowerCase()}</div>
+    return <div className="item-name default">{Utils.fromMaterial(material)}</div>
   }
 
   if (!name.includes('&')) {
