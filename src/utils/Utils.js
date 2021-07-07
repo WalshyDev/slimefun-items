@@ -1,5 +1,5 @@
 export function fromMaterial(material) {
-  return material.charAt(0) + this.replaceAll(material.substring(1).toLowerCase(), '_', ' ');
+  return material.charAt(0) + replaceAll(material.substring(1).toLowerCase(), '_', ' ');
 }
 
 // Martin is using Chrome 78 (2019) for some reason... it doesn't have String#replaceAll
